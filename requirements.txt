@@ -1,2 +1,7 @@
 smolagents[tools]
+ddgs
 smolagents[litellm]
+uvicorn
+fastapi
+crewai_tools
+selenium
