@@ -26,8 +26,7 @@ config_rag = {
     "embedder": {
         "provider": "ollama",
         "config": {
-            "model": "nomic-embed-text",
-            "url": "http://localhost:11434/api/embeddings"
+            "model": "nomic-embed-text"
         }
     }
 }
@@ -48,8 +47,8 @@ if __name__ == "__main__":
     # print(resp)
 
     rag_tool = create_rag_tool(config_rag, HTML_FOLDER)
-    agent2 = analyzer_agent(model1, rag_tool)
-    print(agent2)
+    # agent2 = analyzer_agent(model1, rag_tool)
+    # print(agent2)
     
 
 

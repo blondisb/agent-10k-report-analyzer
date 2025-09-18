@@ -2,6 +2,7 @@ smolagents[tools]
 ddgs
 smolagents[litellm]
 uvicorn
-fastapi
+# fastapi
 crewai_tools
 selenium
+langchain-ollama

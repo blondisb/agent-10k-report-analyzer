@@ -15,13 +15,19 @@ def html_docs(html_folder):
     return documents
 
 
-def create_rag_tool(config_rag, HTML_FOLDER):
+def create_rag_tool(config_rag, folder):
+
+
+    print(os.path.exists("./media/2024.txt"))
     
     rag_tool = RagTool(
         config = config_rag,
         chunk_size = 1200,
         chunk_overlap=200
     )
+
+    # rag_tool.add(source="./media/2024.txt", data_type="file")
+    rag_tool.add("./media/2024.txt")
 
     # urls =[
     #     "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231.htm",
@@ -36,7 +42,7 @@ def create_rag_tool(config_rag, HTML_FOLDER):
     # for doc in docs:
     #     rag_tool.add(doc)
 
-    rag_tool.add("./media/2024.txt")
+    
 
 
     return rag_tool
